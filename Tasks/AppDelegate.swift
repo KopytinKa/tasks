@@ -14,6 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let task1 = Task(description: "Task 1", main: true)
+        let task2 = Task(description: "Task 2", main: true)
+        let task3 = Task(description: "Task 3", main: true)
+        let task4 = Task(description: "Task 4", main: true)
+        let task5 = Task(description: "Task 5", main: true)
+        let task6 = Task(description: "Task 6", main: true)
+        let task7 = Task(description: "Task 7", main: false)
+        let task8 = Task(description: "Task 8", main: false)
+        let task9 = Task(description: "Task 9", main: false)
+        let task10 = Task(description: "Task 10", main: false)
+        task1.tasks = [task8, task9, task10]
+        task10.tasks = [task7]
+        
+        Tasks.shared.tasks = [task1, task2, task3, task4, task5, task6, task7, task8, task9, task10]
         return true
     }
 
